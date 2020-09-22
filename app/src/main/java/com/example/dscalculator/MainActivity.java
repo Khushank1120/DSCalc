@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         hasDot = false;
         isSpecialFunctionOn = false;
 
-
     }
 
     @SuppressLint("SetTextI18n")
@@ -94,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         input.setText(null);
         signBox.setText("-");
         hasDot = false;
-
     }
     public void btnClick_multiply (View view){
         sign = "*";
@@ -102,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         input.setText(null);
         signBox.setText("X");
         hasDot = false;
-
     }
     public void btnClick_divide (View view){
         sign = "/";
@@ -110,26 +107,44 @@ public class MainActivity extends AppCompatActivity {
         input.setText(null);
         signBox.setText("÷");
         hasDot = false;
-
     }
     public void btnClick_maxNodesBT(View view) {
         specialFunction = "power";
         value1 = input.getText().toString();
         input.setText(null);
-        signBox.setText("Max nodes in BT");
+        signBox.setText("Enter value of h");
         hasDot = false;
-
-
     }
     public void btnClick_minNodesBT(View view) {
         specialFunction = "minNodes";
         value1 = input.getText().toString();
         input.setText(null);
-        signBox.setText("Min nodes in BT");
+        signBox.setText("Enter value of h");
+        hasDot = false;
+    }
+    public void btnClick_leafNodesBT(View view) {
+        specialFunction = "leafNodes";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of n");
+        hasDot = false;
+    }
+    public void btnClick_maxHeightBT(View view) {
+        specialFunction = "maxHeight";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of n");
+        hasDot = false;
+    }
+    public void btnClick_minHeightBT(View view) {
+        specialFunction = "minHeight";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of n");
         hasDot = false;
     }
 
-        @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n")
     public void btnClick_equal(View view) {
         if( (specialFunction == null && sign == null)||input.getText().equals("")){
             signBox.setText("Error!");
@@ -139,23 +154,50 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                     case "power":
-                    value1 = input.getText().toString();
-                    num1 = Double.parseDouble(value1);
-                    input.setText( Math.pow(2,num1+1)-1 + "");
-                    specialFunction = null;
-                    isSpecialFunctionOn = false;
-                    signBox.setText(null);
-                    break;
+                        value1 = input.getText().toString();
+                        num1 = Double.parseDouble(value1);
+                        input.setText(Math.pow(2,num1+1)-1 + "");
+                        specialFunction = null;
+                        isSpecialFunctionOn = false;
+                        signBox.setText(null);
+                        break;
 
-                    case "minNodes":
-                    value1 = input.getText().toString();
-                    num1 = Double.parseDouble(value1);
-                    result = num1 +1;
-                    specialFunction = null;
-                    sign = null;
-                    signBox.setText(null);
-                    break;
+                        case "minNodes":
+                            value1 = input.getText().toString();
+                            num1 = Double.parseDouble(value1);
+                            input.setText(Math.pow(Double.parseDouble(value1),1)+1 + "");
+                            specialFunction = null;
+                            isSpecialFunctionOn = false;
+                            signBox.setText(null);
+                            break;
 
+                            case "leafNodes":
+                                value1 = input.getText().toString();
+                                num1 = Double.parseDouble(value1);
+                                input.setText((Math.floor(Double.parseDouble(value1))+1)/2 + "");
+//                    floor value because leaf nodes have a value in integer
+                                specialFunction = null;
+                                isSpecialFunctionOn = false;
+                                signBox.setText(null);
+                                break;
+
+                                case "maxHeight":
+                                    value1 = input.getText().toString();
+                                    num1 = Double.parseDouble(value1);
+                                    input.setText(Math.pow(num1,1)-1 + "");
+                                    specialFunction = null;
+                                    isSpecialFunctionOn = false;
+                                    signBox.setText(null);
+                                    break;
+
+                                    case "minHeight":
+                                        value1 = input.getText().toString();
+                                        num1 = Double.parseDouble(value1);
+                                        input.setText((Math.log(num1+1)/Math.log(2))-1 + "");
+                                        specialFunction = null;
+                                        isSpecialFunctionOn = false;
+                                        signBox.setText(null);
+                                        break;
 
             }
         }
@@ -169,17 +211,12 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     break;
 
-
-
-
                 case "+":
                     result = num1 + num2;
                     input.setText(result + "");
                     sign = null;
                     signBox.setText(null);
                     break;
-
-
 
                     case "-":
                     result = num1 - num2;
@@ -207,7 +244,6 @@ public class MainActivity extends AppCompatActivity {
 
         else input.setText("Error!");
     }
-
 
     public void btnClick_delete(View view) {
         if(input.getText().equals("")){

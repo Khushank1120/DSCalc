@@ -34,8 +34,6 @@
         android:gravity="center|end"
         android:padding="10dp"
         android:textSize="50sp" />
-    
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,6 +61,7 @@
             android:layout_height="63dp"
             android:layout_weight="1"
             android:text="Leaf Nodes \n in BT"
+            android:onClick="btnClick_leafNodesBT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="11sp"
@@ -79,30 +78,34 @@
             android:textColor="#FFFFFF"
             android:textSize="11sp"
             android:textStyle="bold" />
+
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="9dp"
             android:layout_height="63dp"
             android:layout_weight="1"
             android:textStyle="bold"
+            android:onClick="btnClick_maxHeightBT"
             android:text="Max Height of BT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="11sp" />
+
         <Button
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="10dp"
-        android:layout_height="63dp"
-        android:layout_weight="1"
-        android:text="Min Height of BT"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="11sp"
-        android:textStyle="bold" />
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="10dp"
+            android:layout_height="63dp"
+            android:layout_weight="1"
+            android:onClick="btnClick_minHeightBT"
+            android:text="Min Height of BT"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
-    <LinearLayout
 
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -165,7 +168,6 @@
             android:textColor="#8F100B"
             android:textSize="11.25sp"
             android:textStyle="bold" />
-
 
     </LinearLayout>
 
@@ -310,8 +312,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#86050E"
-            android:onClick="btnClick_6"
-            android:text="6"
+            android:onClick="btnClick_4"
+            android:text="4"
             android:textColor="#FDFDFD"
             android:textSize="30dp" />
 
@@ -332,11 +334,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#86050E"
-            android:onClick="btnClick_4"
-            android:text="4"
+            android:onClick="btnClick_6"
+            android:text="6"
             android:textColor="#FDFDFD"
             android:textSize="30dp" />
-
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -503,7 +504,6 @@
                 android:textColor="#3D2829"
                 android:textSize="30dp"
                 android:textStyle="bold" />
-
 
         </LinearLayout>
 
