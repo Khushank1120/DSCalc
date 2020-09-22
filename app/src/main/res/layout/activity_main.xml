@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="9"
+    tools:context=".MainActivity" >
+
+    <TextView
+
+        android:id="@+id/input"
+        android:background="#FBFBFB"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center|end"
+        android:textSize="50sp"
+        android:maxLength="15"
+        android:hint="0"
+        android:padding="10dp" />
+
+    <TextView
+
+        android:id="@+id/sign"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:gravity="center|end"
+        android:padding="10dp"
+        android:textSize="50sp" />
+    
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#E3E0E0"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="9dp"
+            android:layout_height="63dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="Height of PBT"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="20dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center|end|left"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="Nodes at Depth of PBT"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="11sp" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="63dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="Leaf Nodes in PBT"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="20dp"
+            android:layout_height="63dp"
+            android:layout_weight="1.25"
+            android:textStyle="bold"
+            android:text="Internal Nodes in PBT"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="11.2sp" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="40dp"
+            android:layout_height="63dp"
+            android:layout_weight="0.72"
+            android:textStyle="bold"
+            android:text="Max Nodes in PBT"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="11.25sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
