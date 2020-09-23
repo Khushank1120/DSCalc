@@ -116,28 +116,87 @@ public class MainActivity extends AppCompatActivity {
         hasDot = false;
     }
     public void btnClick_minNodesBT(View view) {
-        specialFunction = "minNodes";
+        specialFunction = "minNodesBt";
         value1 = input.getText().toString();
         input.setText(null);
         signBox.setText("Enter value of h");
         hasDot = false;
     }
     public void btnClick_leafNodesBT(View view) {
-        specialFunction = "leafNodes";
+        specialFunction = "leafNodesBt";
         value1 = input.getText().toString();
         input.setText(null);
         signBox.setText("Enter value of n");
         hasDot = false;
     }
     public void btnClick_maxHeightBT(View view) {
-        specialFunction = "maxHeight";
+        specialFunction = "maxHeightBt";
         value1 = input.getText().toString();
         input.setText(null);
         signBox.setText("Enter value of n");
         hasDot = false;
     }
     public void btnClick_minHeightBT(View view) {
-        specialFunction = "minHeight";
+        specialFunction = "minHeightBt";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of n");
+        hasDot = false;
+    }
+    public void btnClick_nodesInPBT(View view) {
+        specialFunction = "power";
+//        same as max nodes in Binary Tree
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of h");
+        hasDot = false;
+    }
+    public void btnClick_nodesDepthPBT(View view) {
+        specialFunction = "nodesDepthPBT";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of d");
+        hasDot = false;
+    }
+    public void btnClick_leafNodesPBT(View view) {
+        specialFunction = "nodesDepthPBT";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of h");
+        hasDot = false;
+    }
+    public void btnClick_internalNodesPBT(View view) {
+        specialFunction = "internalNodesPBT";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of h");
+        hasDot = false;
+    }
+    public void btnClick_maxNodesFBT(View view) {
+        specialFunction = "power";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of h");
+        hasDot = false;
+    }
+    public void btnClick_minNodesFBT(View view) {
+        specialFunction = "minNodesFBT";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of h");
+        hasDot = false;
+    }
+
+    public void btnClick_maxHeightFBT(View view) {
+        specialFunction = "maxHeightFBT";
+        value1 = input.getText().toString();
+        input.setText(null);
+        signBox.setText("Enter value of n");
+        hasDot = false;
+    }
+
+    public void btnClick_minHeightFBT(View view) {
+        specialFunction = "minHeightBT";
         value1 = input.getText().toString();
         input.setText(null);
         signBox.setText("Enter value of n");
@@ -152,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
             switch (specialFunction){
                 default:
                     break;
-
+//Binary Tree
                     case "power":
                         value1 = input.getText().toString();
                         num1 = Double.parseDouble(value1);
@@ -162,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
                         signBox.setText(null);
                         break;
 
-                        case "minNodes":
+                        case "minNodesBt":
                             value1 = input.getText().toString();
                             num1 = Double.parseDouble(value1);
                             input.setText(Math.pow(Double.parseDouble(value1),1)+1 + "");
@@ -171,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
                             signBox.setText(null);
                             break;
 
-                            case "leafNodes":
+                            case "leafNodesBt":
                                 value1 = input.getText().toString();
                                 num1 = Double.parseDouble(value1);
                                 input.setText((Math.floor(Double.parseDouble(value1))+1)/2 + "");
@@ -181,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
                                 signBox.setText(null);
                                 break;
 
-                                case "maxHeight":
+                                case "maxHeightBt":
                                     value1 = input.getText().toString();
                                     num1 = Double.parseDouble(value1);
                                     input.setText(Math.pow(num1,1)-1 + "");
@@ -190,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
                                     signBox.setText(null);
                                     break;
 
-                                    case "minHeight":
+                                    case "minHeightBt":
                                         value1 = input.getText().toString();
                                         num1 = Double.parseDouble(value1);
                                         input.setText((Math.log(num1+1)/Math.log(2))-1 + "");
@@ -198,6 +257,44 @@ public class MainActivity extends AppCompatActivity {
                                         isSpecialFunctionOn = false;
                                         signBox.setText(null);
                                         break;
+//  Perfect Binary Tree
+//                nodes in PBT case is equal to the power case so...
+
+                                        case "nodesDepthPBT":
+                                            value1 = input.getText().toString();
+                                            num1 = Double.parseDouble(value1);
+                                            input.setText(Math.pow(2,num1) + "");
+                                            specialFunction = null;
+                                            isSpecialFunctionOn = false;
+                                            signBox.setText(null);
+                                            break;
+
+                                            case "internalNodesPBT":
+                                                value1 = input.getText().toString();
+                                                num1 = Double.parseDouble(value1);
+                                                input.setText(Math.pow(2,num1)-1 + "");
+                                                specialFunction = null;
+                                                isSpecialFunctionOn = false;
+                                                signBox.setText(null);
+                                                break;
+
+                                                case "minNodesFBT":
+                                                    value1 = input.getText().toString();
+                                                    num1 = Double.parseDouble(value1);
+                                                    input.setText(Math.pow(2,num1)+1 + "");
+                                                    specialFunction = null;
+                                                    isSpecialFunctionOn = false;
+                                                    signBox.setText(null);
+                                                    break;
+
+                                                    case "maxHeightFBT":
+                                                        value1 = input.getText().toString();
+                                                        num1 = Double.parseDouble(value1);
+                                                        input.setText((Math.floor(Double.parseDouble(value1))-1)/2 + "");
+                                                        specialFunction = null;
+                                                        isSpecialFunctionOn = false;
+                                                        signBox.setText(null);
+                                                        break;
 
             }
         }
@@ -271,6 +368,5 @@ public class MainActivity extends AppCompatActivity {
         hasDot = false;
 
     }
-
 
 }

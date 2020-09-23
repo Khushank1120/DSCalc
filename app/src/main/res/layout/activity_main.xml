@@ -111,14 +111,15 @@
         android:layout_weight="1"
         android:background="#41E3E0E0"
         android:orientation="horizontal"
-        android:weightSum="5" >
+        android:weightSum="4" >
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="9dp"
             android:layout_height="63dp"
             android:layout_weight="1"
-            android:text="Height of PBT"
+            android:onClick="btnClick_nodesInPBT"
+            android:text="Nodes in PBT"
             android:textAllCaps="false"
             android:textColor="#8F100B"
             android:textSize="12sp"
@@ -130,11 +131,12 @@
             android:layout_height="63dp"
             android:layout_gravity="center|end|left"
             android:layout_weight="1"
+            android:onClick="btnClick_nodesDepthPBT"
             android:textStyle="bold"
             android:text="Nodes at Depth of PBT"
             android:textAllCaps="false"
             android:textColor="#8F100B"
-            android:textSize="11sp" />
+            android:textSize="12sp" />
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -142,6 +144,7 @@
             android:layout_height="63dp"
             android:layout_weight="1"
             android:text="Leaf Nodes in PBT"
+            android:onClick="btnClick_leafNodesPBT"
             android:textAllCaps="false"
             android:textColor="#8F100B"
             android:textSize="12sp"
@@ -151,22 +154,12 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="20dp"
             android:layout_height="63dp"
-            android:layout_weight="1.25"
+            android:layout_weight="1"
             android:text="Internal Nodes in PBT"
+            android:onClick="btnClick_internalNodesPBT"
             android:textAllCaps="false"
             android:textColor="#8F100B"
-            android:textSize="11.2sp"
-            android:textStyle="bold" />
-
-        <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="40dp"
-            android:layout_height="63dp"
-            android:layout_weight="0.72"
-            android:text="Max Nodes in PBT"
-            android:textAllCaps="false"
-            android:textColor="#8F100B"
-            android:textSize="11.25sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -186,6 +179,7 @@
             android:layout_weight="1"
             android:textStyle="bold"
             android:text="Max nodes in FBT"
+            android:onClick="btnClick_minNodesFBT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="11sp" />
@@ -217,6 +211,7 @@
             android:layout_height="63dp"
             android:layout_weight="1"
             android:text="Max Height of FBT"
+            android:onClick="btnClick_maxHeightFBT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="11sp"
@@ -226,6 +221,7 @@
             android:layout_width="10dp"
             android:layout_height="63dp"
             android:layout_weight="1"
+            android:onClick="btnClick_minHeightFBT"
             android:textStyle="bold"
             android:text="Min Height of FBT"
             android:textAllCaps="false"
@@ -233,7 +229,6 @@
             android:textSize="11sp" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -276,11 +271,10 @@
             android:textSize="30dp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#E4E4E4"
+            android:background="#EFECEC"
             android:onClick="btnClick_add"
             android:text="+"
             android:textColor="#483B3B"
@@ -292,7 +286,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#E4E4E4"
+            android:background="#EFECEC"
             android:onClick="btnClick_delete"
             android:src="@drawable/ic_baseline_backspace_24"
             android:textSize="30dp" />
@@ -340,11 +334,10 @@
             android:textSize="30dp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#E4E4E4"
+            android:background="#EFECEC"
             android:onClick="btnClick_subtract"
             android:text="-"
             android:textColor="#000000"
@@ -356,7 +349,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#E4E4E4"
+            android:background="#EFECEC"
             android:onClick="btnClick_clear"
             android:text="C"
             android:textColor="#483B3B"
@@ -426,7 +419,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#E4E4E4"
+                    android:background="#EFECEC"
                     android:onClick="btnClick_multiply"
                     android:text="X"
                     android:textColor="#3D2829"
@@ -442,6 +435,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="4">
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -475,7 +469,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#E4E4E4"
+                    android:background="#EFECEC"
                     android:onClick="btnClick_divide"
                     android:text="÷"
                     android:textColor="#3D2829"
@@ -487,6 +481,7 @@
         </LinearLayout>
 
         <LinearLayout
+
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -498,7 +493,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#E4E4E4"
+                android:background="#EFECEC"
                 android:onClick="btnClick_equal"
                 android:text="="
                 android:textColor="#3D2829"
