@@ -73,9 +73,10 @@ public class MainActivity extends AppCompatActivity {
             if(input.getText().equals("")){
 
                 input.setText("0.");
+                
             }else{
                 input.setText(input.getText() + ".");
-
+                
             }hasDot = true;
         }
     }
@@ -257,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
                                         isSpecialFunctionOn = false;
                                         signBox.setText(null);
                                         break;
-//  Perfect Binary Tree
+//        Perfect Binary Tree
 //                nodes in PBT case is equal to the power case so...
 
                                         case "nodesDepthPBT":
@@ -334,8 +335,7 @@ public class MainActivity extends AppCompatActivity {
                     input.setText(result + "");
                     sign = null;
                     signBox.setText(null);
-                    break;
-
+                    break;                
             }
         }
 
@@ -345,7 +345,9 @@ public class MainActivity extends AppCompatActivity {
     public void btnClick_delete(View view) {
         if(input.getText().equals("")){
             input.setText(null);
+        
         }else{
+            
             int len = input.getText().length();
             String s = input.getText().toString();
             if (s.charAt(len-1) == '.'){
@@ -368,5 +370,5 @@ public class MainActivity extends AppCompatActivity {
         hasDot = false;
 
     }
-
+    
 }
