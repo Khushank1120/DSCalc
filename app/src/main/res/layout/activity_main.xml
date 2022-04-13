@@ -3,26 +3,26 @@
 <LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="9"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <TextView
 
         android:id="@+id/input"
-        android:background="#FBFBFB"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.25"
+        android:background="#FBFBFB"
         android:gravity="center|end"
-        android:textSize="50sp"
-        android:maxLength="15"
         android:hint="0"
-        android:padding="8dp" />
+        android:maxLength="15"
+        android:padding="8dp"
+        android:textSize="50sp" />
 
     <TextView
 
@@ -40,18 +40,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#AC2510"
+        android:background="#ffffff"
         android:orientation="horizontal"
-        android:weightSum="5" >
+        android:weightSum="5">
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="11dp"
-            android:layout_height="63dp"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
-            android:onClick="btnClick_maxNodesBT"
-            android:text="Max nodes in BT"
+            android:background="#9A150F"
             android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="btnClick_maxNodesBT"
+            android:text=" Max nodes in BT "
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="11sp"
@@ -60,11 +62,13 @@
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="10sp"
-            android:layout_height="63dp"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
-            android:text="Leaf Nodes \n in BT"
+            android:background="#9A150F"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_leafNodesBT"
+            android:text="Leaf Nodes \n in BT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="11sp"
@@ -73,8 +77,10 @@
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="10dp"
-            android:layout_height="63dp"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
+            android:background="#9A150F"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_minNodesBT"
             android:text="Min Nodes in BT"
@@ -86,21 +92,26 @@
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="9dp"
-            android:layout_height="63dp"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
-            android:textStyle="bold"
+            android:background="#9A150F"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_maxHeightBT"
             android:text="Max Height of BT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            android:textStyle="bold" />
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="10dp"
-            android:layout_height="63dp"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_marginLeft="1dp"
             android:layout_weight="1"
+            android:background="#9A150F"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_minHeightBT"
             android:text="Min Height of BT"
@@ -117,7 +128,7 @@
         android:layout_weight="1"
         android:background="#41E3E0E0"
         android:orientation="horizontal"
-        android:weightSum="4" >
+        android:weightSum="4">
 
         <Button
             style="@style/Widget.AppCompat.Button"
@@ -136,24 +147,24 @@
             style="@style/Widget.AppCompat.Button"
             android:layout_width="20dp"
             android:layout_height="63dp"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:layout_gravity="center|end|left"
             android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_nodesDepthPBT"
-            android:textStyle="bold"
             android:text="Nodes at Depth of PBT"
             android:textAllCaps="false"
             android:textColor="#8F100B"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <Button
             style="@style/Widget.AppCompat.Button"
             android:layout_width="35dp"
             android:layout_height="63dp"
             android:layout_weight="1"
-            android:text="Leaf Nodes in PBT"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_leafNodesPBT"
+            android:text="Leaf Nodes in PBT"
             android:textAllCaps="false"
             android:textColor="#8F100B"
             android:textSize="12sp"
@@ -162,11 +173,11 @@
         <Button
             style="@style/Widget.AppCompat.Button"
             android:layout_width="20dp"
-            android:layout_height="63dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Internal Nodes in PBT"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_internalNodesPBT"
+            android:text="Internal Nodes in PBT"
             android:textAllCaps="false"
             android:textColor="#8F100B"
             android:textSize="12sp"
@@ -177,31 +188,32 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:background="#9A150F"
         android:orientation="horizontal"
-        android:weightSum="5" >
+        android:weightSum="5">
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="11dp"
             android:layout_height="63dp"
             android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Max nodes in FBT"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_minNodesFBT"
+            android:text="Max nodes in FBT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            android:textStyle="bold" />
 
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="10sp"
             android:layout_height="63dp"
             android:layout_weight="1"
-            android:text="Leaf Nodes \n in FBT"
             android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="Leaf Nodes \n in FBT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="11sp"
@@ -212,36 +224,38 @@
             android:layout_width="10dp"
             android:layout_height="63dp"
             android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="Min Nodes in FBT"
             android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="Min Nodes in FBT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="9dp"
             android:layout_height="63dp"
             android:layout_weight="1"
-            android:text="Max Height of FBT"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_maxHeightFBT"
+            android:text="Max Height of FBT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="11sp"
             android:textStyle="bold" />
+
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="10dp"
             android:layout_height="63dp"
             android:layout_weight="1"
-            android:onClick="btnClick_minHeightFBT"
-            android:textStyle="bold"
             android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="btnClick_minHeightFBT"
             android:text="Min Height of FBT"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -257,8 +271,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:background="#86050E"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_7"
             android:text="7"
             android:textColor="#FDFDFD"
@@ -292,11 +306,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#EFECEC"
+            android:background="#FFFFFF"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_add"
             android:text="+"
             android:textColor="#483B3B"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:textSize="30dp"
             android:textStyle="bold" />
 
@@ -305,9 +319,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#EFECEC"
-            android:onClick="btnClick_delete"
+            android:background="#AC2727"
             android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="btnClick_delete"
             android:src="@drawable/ic_baseline_backspace_24"
             android:textSize="30dp" />
 
@@ -357,10 +371,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#EFECEC"
+            android:background="#FFFFFF"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_subtract"
             android:text="-"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:textColor="#000000"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -369,12 +383,13 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
             android:layout_weight="1"
-            android:background="#EFECEC"
+            android:background="#AC2727"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:onClick="btnClick_clear"
             android:text="C"
             android:textColor="#483B3B"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:textSize="25dp"
             android:textStyle="bold" />
 
@@ -441,10 +456,10 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#EFECEC"
+                    android:background="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
                     android:onClick="btnClick_multiply"
                     android:text="X"
-                    android:foreground="?attr/selectableItemBackgroundBorderless"
                     android:textColor="#3D2829"
                     android:textSize="23dp"
                     android:textStyle="bold" />
@@ -463,7 +478,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#86050E"/>
+                    android:background="#86050E" />
 
                 <Button
                     style="@style/Widget.AppCompat.Button"
@@ -492,10 +507,10 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#EFECEC"
+                    android:background="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
                     android:onClick="btnClick_divide"
                     android:text="÷"
-                    android:foreground="?attr/selectableItemBackgroundBorderless"
                     android:textColor="#3D2829"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -515,11 +530,11 @@
             <Button
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
                 android:layout_weight="1"
-                android:layout_marginLeft="0.1dp"
+                android:background="#AC2727"
                 android:foreground="?attr/selectableItemBackgroundBorderless"
-                android:background="#A32D2D"
                 android:onClick="btnClick_equal"
                 android:text="="
                 android:textColor="#3D2829"
