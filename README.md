@@ -1,3 +1,3 @@
 # DSCalc
 
-**Was lazy to do the calculations in my Data Structure class and so created an Android App to ease the calcualtions.**
+**To make the process of calculations in my Data Structure class ease so developed an Android App.**
